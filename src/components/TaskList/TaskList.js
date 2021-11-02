@@ -46,11 +46,12 @@ export default function TaskList({
             />
           );
         })}
+
+        {tasks.length === 0 && <div className="empty-list">Lista Vazia</div>}
+        <button onClick={addTask} className="btn">
+          Adicionar Tarefa
+        </button>
       </div>
-      {tasks.length === 0 && <div className="empty-list">Lista Vazia</div>}
-      <button onClick={addTask} className="btn">
-        Adicionar Tarefa
-      </button>
     </div>
   );
 }
